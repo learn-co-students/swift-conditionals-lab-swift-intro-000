@@ -106,7 +106,17 @@ func isGreater(z: Int, n: Int) -> Bool {
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
 func isForceWith(name: String) -> Bool {
-    if name == "Yoda" {
+    if name == "Luke" {
+        return true
+    } else if name == "Leia"{
+        return true
+    } else if name == "Anakin"{
+        return true
+    } else if name == "Obi Wan"{
+        return true
+    } else if name == "Yoda"{
+        return true
+    } else if name == "Vader"{
         return true
     } else {
         return false
