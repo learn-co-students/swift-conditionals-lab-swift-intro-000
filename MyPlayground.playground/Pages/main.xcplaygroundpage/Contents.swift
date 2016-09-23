@@ -94,20 +94,23 @@ isForceWith(name: "Rey")
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
-//var myBankAccount = 20
-//var banksAccount = 20
-//
-//func transactionTime(mine: Int, banks: Int) -> Int {
-//    if banks - 10 != 0 {
-//        banks -= 10
-//        mine += 10
-//        return mine
-//    } else {
-//        print("Transaction denied by limited funds")
-//    }
-//}
+var myBankAccount = 20
+var banksAccount = 20
 
-//transactionTime(mine: myBankAccount, banks: banksAccount)
+func transactionTime(mine: Int, banks: Int){
+    if banks - 10 != 0 {
+        _ = banks - 10
+        mine + 10
+        // underscore and non-underscore way both works...
+        print(mine)
+        print(banks)
+        // it prints the values before change. need to look into this.
+    } else {
+        print("Transaction denied by limited funds")
+    }
+}
+transactionTime(mine: myBankAccount, banks: banksAccount)
+// didnt do float because it was only in 10's with no decimal.
 /*:
  Checkout the solution branch - git co solution or git checkout solution and then scroll back down to this very spot to see a link that directs you to the solutions to the above questions.
  */
