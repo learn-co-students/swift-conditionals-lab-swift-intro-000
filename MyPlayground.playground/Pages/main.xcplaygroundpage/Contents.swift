@@ -25,19 +25,19 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
+print(33 >= b)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
-
+print(64 % b)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
-
+print((y * b) <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
@@ -50,7 +50,9 @@ let b = 32
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
-
+if((10%2) == 0) {
+    print("True")
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
