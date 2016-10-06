@@ -107,12 +107,12 @@ isGreater(num: 3, ber: 2)
 // write your code here
 
 func isForceWith(jedi: String) -> Bool {
-    let jedis = ["Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader"]
-    var result = Bool()
+    let jedis: [String] = ["Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader"]
+    let result = Bool()
     for name in jedis {
         if jedi == name {
             return result == true
-        } else if jedi != name {
+        } else {
             return result == false
         }
     }
@@ -141,7 +141,7 @@ func bankAccount(his: Int, hers: Int) -> Int {
     return out
 }
 
-bankAccount(his: 10, hers: -10)
+
 
 /*:
  Checkout the solution branch - git co solution or git checkout solution and then scroll back down to this very spot to see a link that directs you to the solutions to the above questions.
