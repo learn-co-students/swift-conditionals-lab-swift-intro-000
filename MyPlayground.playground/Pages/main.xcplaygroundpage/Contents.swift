@@ -25,32 +25,27 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 
-321 >= 32
+print(a>=b)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 
 
- a/b == 10 {
-    
-    print("passed test")
-    
-}
+ print(a % b == 0)
+
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 
-  12 * 321 <= a
+ print(y*b <= a)
 
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 
- 
-
-
+print(!(a >= b))
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
@@ -58,10 +53,10 @@ let b = 32
 
  
  
-if a > b = 0
+if a % b == 0
  { 
  
- true()
+ print("true")
  
  }
  
@@ -73,34 +68,31 @@ if a > b = 0
 */
 
  
- if a/b > x {
+ if Double(a / b) > x {
  
- true() 
+ print ("true")
+
  }
  
- else {
  
- false()
- 
- } 
  
 
 
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
-*/
+
 
  
- if y/x > 3 { 
+ if Double(y) / x > Double(3) {
  
- true() 
+ print("true")
  
  }
  
  else {
  
- false() 
+ print("false")
  
  } 
  
@@ -114,7 +106,18 @@ if a > b = 0
 */
 
  
- if y > x && a/b > 9
+ if Double(y) > x && a / b > 9 {
+ 
+ print("true")
+ 
+ }
+ 
+ else {
+ 
+ print("false")
+ 
+ }
+ 
 
 
 
@@ -123,14 +126,12 @@ if a > b = 0
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 
- let aa = 2
- let bb = 1
  
- func isGreater(a:Int, bb: Int)-> Int
+ func isGreater(a:Int, b: Int)-> Bool
  
- { if aa > bb == true 
+ { if a > b  {
   
- return true ()
+ return true
  
  }
  
@@ -138,10 +139,10 @@ if a > b = 0
  else
  { 
  
- false()
+  return false
  
  } 
- 
+ }
 
 
 
@@ -151,14 +152,65 @@ if a > b = 0
 /*: Question 10
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
-// write your code here
+ isForthWith func(name:String) -> Bool {
+ 
+ if name == "Luke" {
+ 
+ return true 
+ 
+ } 
+ 
+ else if name == Leia {
+ 
+ return true 
+ 
+ } 
+ 
+ else if name == "Anakin" { 
+ 
+ return true 
+ 
+ } 
+ 
+ else if name == "Obi Wan" {
+ 
+ return true 
+ 
+ }
+ 
+ else if name == "Yoda" { 
+ 
+ return true 
+ 
+ } 
+ 
+ else if name == "Vader" { 
+ 
+ return true } 
+ 
+ else {
+ 
+ return flase 
+ } 
+ 
+ }
 
 
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
-// write your code here
+
+ func bankAccounts(a:Int, b: Int) { 
+ 
+ if b >= 10 { 
+ 
+ a + 10
+ b - 10
+ 
+ } 
+ 
+ } 
 
 
 
