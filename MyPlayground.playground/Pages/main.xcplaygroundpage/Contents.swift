@@ -56,8 +56,9 @@ if (a % b) == 0 {
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
-// write your code here
-
+if (a / b) > Int(x) {
+    print(true)
+}
 
 
 /*: Question 7
