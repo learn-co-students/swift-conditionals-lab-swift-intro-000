@@ -57,15 +57,18 @@ if (a % b) == 0 {
 ### 6. Print "true" if a divided by b is greater than x
 */
 if (a / b) > Int(x) {
-    print(true)
+    print("true")
 }
 
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
-// write your code here
-
+if (Double(y) / x) > 3 {
+    print("true")
+} else {
+    print("false")
+}
 
 
 
