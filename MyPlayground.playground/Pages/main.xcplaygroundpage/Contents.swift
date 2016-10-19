@@ -42,8 +42,7 @@ print((y * b) <= a)
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
-// write your code here
-
+print(!(a >= b))
 
 
 /*: Question 5
