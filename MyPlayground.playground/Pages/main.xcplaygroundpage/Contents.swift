@@ -37,8 +37,7 @@ print((a % b) == 0)
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
-// write your code here
-
+print((y * b) <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
