@@ -75,8 +75,9 @@ if (Double(y) / x) > 3 {
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
-// write your code here
-
+if (y > Int(x)) && ((a / b) > 9) {
+    print("true")
+}
 
 
 
