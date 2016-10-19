@@ -24,8 +24,9 @@ let b = 32
 /*: Question 1
 ### 1. Print the result of a greater than or equal to b
 */
-// write your code here
+var result1 = a >= b
 
+print(result1)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
