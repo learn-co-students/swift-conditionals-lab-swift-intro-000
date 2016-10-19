@@ -31,7 +31,7 @@ print(result1)
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
-// write your code here
+print((a % b) == 0)
 
 
 /*: Question 3
