@@ -84,7 +84,14 @@ if (y > Int(x)) && ((a / b) > 9) {
 /*: Question 9
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
-// write your code here
+func isGreater(num1: Int, num2: Int) -> Bool {
+    if num1 > num2 {
+        return true
+    } else {
+        return false
+    }
+}
+
 
 
 
@@ -94,15 +101,28 @@ if (y > Int(x)) && ((a / b) > 9) {
 /*: Question 10
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
-// write your code here
+func isForceWithin(name: String) -> Bool {
+    if name == "Luke" || name == "Leia" || name == "Anakin" || name == "Obi Wan" || name == "Yoda" || name == "Vader"{
+        return true
+    } else {
+        return false
+    }
+}
 
 
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
-// write your code here
 
+func loanShark(account1: Double, account2: Double) {
+    if account1.isFinite {
+        account1 + Double(10)
+        
+    } else if account2 >= Double(10){
+        account2 - Double(10)
+    }
+}
 
 
 
