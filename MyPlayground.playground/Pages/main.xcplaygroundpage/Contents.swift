@@ -48,7 +48,9 @@ print(!(a >= b))
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
-// write your code here
+if (a % b) == 0 {
+    print("true")
+}
 
 
 /*: Question 6
