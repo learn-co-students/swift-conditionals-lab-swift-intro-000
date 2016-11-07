@@ -24,72 +24,55 @@ let b = 32
 /*: Question 1
 ### 1. Print the result of a greater than or equal to b
 */
-let result = a >= b
-print(result)
+print(a >= b)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
-let moduloResult = a % b == 0
-print(moduloResult)
 
+print(a%b == 0)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
-let resultThree = (y * b) <= a
-print (resultThree)
+print((y * b) <= a)
+
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 let resultFour = a >= b
-let inverse = !resultFour
-print(inverse)
+print(!resultFour)
+
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
-func testIfTrue (){
+if a % b == 0 {
     print("true")
-}
- var moduloTest = a % b == 0
-
-if moduloTest == true{
-    testIfTrue()
 }
 
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
-moduloTest = (a / b) > Int(x)
-testIfTrue()
+if a / b > Int(x){
+    print("true")
+}
 
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
-func testIfFalse () {
-    print ("false")
-}
-moduloTest = y / Int(x) > 3
-
-if moduloTest == true {
-    testIfTrue()
-} else {
-    testIfFalse()
-}
+print(y/Int(x) > 3)
 
 
 
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
-moduloTest = (y > Int(x)) && (a / b > 9)
-
-if moduloTest == true {
-    testIfTrue()
+if (y > Int(x)) && (a / b > 9) {
+    print("true")
 }
 
 
