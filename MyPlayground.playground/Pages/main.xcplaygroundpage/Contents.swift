@@ -25,19 +25,25 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
+if a > b {
+    print(a)
+}
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
-
+if (b % 4 == 0)
+{
+    print(b % 4)
+}
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
+var total = y * b
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
@@ -80,9 +86,19 @@ let b = 32
 */
 // write your code here
 
+func isGreater(valueOne: Int, valueTwo: Int) -> Bool
+{
+    var valueState = false
+    
+    if valueOne > valueTwo
+    {
+        valueState = true
+    }
+    
+    return valueState
+}
 
-
-
+isGreater(valueOne: 20, valueTwo: 4)
 
 
 /*: Question 10
@@ -96,9 +112,6 @@ let b = 32
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
-
-
-
 
 
 /*:
