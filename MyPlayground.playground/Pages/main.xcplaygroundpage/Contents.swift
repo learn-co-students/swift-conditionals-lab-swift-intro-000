@@ -143,11 +143,14 @@ isForceWith(name: "Yoda")
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
-func myBankAccs(myNum: Double, num2: Double) {
+func myBankAccs(myNum: Double, num2: Double) -> (Double, Double) {
     if (num2 >= 0 ) {
-        myNum = myNum + 10.0
-        num2 = num2 - 10.0
-        
+        myNum + 10.0
+        num2 - 10.0
+     
+        return (myNum + 10.0, num2 - 10.0)
+    } else {
+        return (0.0, 0.0)
     }
 }
 
