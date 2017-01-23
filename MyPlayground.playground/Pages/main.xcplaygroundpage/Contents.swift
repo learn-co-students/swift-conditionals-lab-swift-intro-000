@@ -26,52 +26,61 @@ let b = 32
 */
 // write your code here
 
-
+print(a >= b)
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
 
-
+print(a % b == 0)
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
-
+print(y * b <= a)
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
-
+print(!(a >= b))
 
 
 /*: Question 5
-### 5. Print "true" if a modulo b is equal to zero
+### 5. Print true if a modulo b is equal to zero
 */
 // write your code here
-
+if a % b == 0{
+    print(true)
+}
 
 /*: Question 6
-### 6. Print "true" if a divided by b is greater than x
+### 6. Print true if a divided by b is greater than x
 */
 // write your code here
-
-
+if a / b > Int(x) {
+    print(true)
+}
 
 /*: Question 7
-### 7. Print "true" if y divided by x is greater than three, otherwise print false
+### 7. Print true if y divided by x is greater than three, otherwise print false
 */
 // write your code here
-
+if y / Int(x) > 3 {
+    print(true)
+} else {
+    print(false)
+}
 
 
 
 /*: Question 8
-### 8. Print "true" if y is greater than x and a divided by b is greater than 9
+### 8. Print true if y is greater than x and a divided by b is greater than 9
 */
 // write your code here
-
+if y > Int(x) && a / b > 9 {
+    print(true)
+}
 
 
 
@@ -79,7 +88,18 @@ let b = 32
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 // write your code here
+func isGreater(x: Int, y: Int) {
+    if x > y {
+        print(true)
+    } else {
+        print(false)
+    }
+}
 
+isGreater(x: 7, y: 8)
+isGreater(x: 8, y: 7)
+isGreater(x: 8, y: 8)
+isGreater(x: 999, y: 0)
 
 
 
@@ -89,7 +109,30 @@ let b = 32
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
 // write your code here
+let forceUsers = ["Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader"]
 
+func isForceWith(person: String) {
+    if person == "Luke" {
+        print(true)
+    } else if person == "Leia" {
+        print(true)
+    } else if person == "Anakin" {
+        print(true)
+    } else if person == "Obi Wan" {
+        print(true)
+    } else if person == "Yoda" {
+        print(true)
+    } else if person == "Vader" {
+        print(true)
+    } else {
+        print(false)
+    }
+}
+
+isForceWith(person: "Anakin")
+isForceWith(person: "Jabba")
+isForceWith(person: "Han Solo")
+isForceWith(person: "Obi Wan")
 
 
 /*: Question 11
@@ -97,8 +140,19 @@ let b = 32
 */
 // write your code here
 
+func transaction(myBank: Int, yourBank: Int) {
+    if yourBank >= 10 {
+        let myBalance = myBank + 10
+        let yourBalance = yourBank - 10
+        print("My account balance: $\(myBalance)   Your account balance: $\(yourBalance)")
+    } else {
+        print("My account balance: $\(myBank)   Your account balance: $\(yourBank)")
+    }
+}
 
-
+transaction(myBank: 10, yourBank: 10)
+transaction(myBank: 10, yourBank: 9)
+transaction(myBank: 0, yourBank: 99)
 
 
 /*:
