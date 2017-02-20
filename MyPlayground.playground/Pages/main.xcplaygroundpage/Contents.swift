@@ -91,39 +91,46 @@ if (Double(y) > x) && Double(a / b) > 9 {
 /*: Question 9
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
-func isGreater(firstNumber: Int, secondNumber: Int) -> Bool {
-    if  (firstNumber) > (secondNumber) {
+func isGreater(a:Int, b:Int) -> Bool {
+    if a > b {
         return true
-    } else { return false
+    } else {
+        return false
+    }
 }
 
 
 /*: Question 10
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
-    func isForceWith(name: String) -> Bool {
+    func isForceWith(name:String) -> Bool {
         if name == "Luke" {
             return true
+            
         } else if name == "Leia" {
             return true
+            
         } else if name == "Anakin" {
             return true
+            
         } else if name == "Obi Wan" {
             return true
+            
         } else if name == "Yoda" {
             return true
+            
         } else if name == "Vader" {
             return true
+            
         } else {
             return false
         }
-}
-
+    }
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
-    func transferMoney(myAccount: Double, otherAccount: Double) {
+    func transferTenDollars(myAccount: Int, otherAccount: Int) {
         if otherAccount >= 10 {
             myAccount + 10
             otherAccount - 10
