@@ -24,7 +24,7 @@ let b = 32
 /*: Question 1
 ### 1. Print the result of a greater than or equal to b
 */
-// write your code here
+print(a > b)
 
 
 /*: Question 2
@@ -32,31 +32,35 @@ let b = 32
 */
 // write your code here
 
-
+print(a % b == 0)
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
-
+print(y * b >= 1)
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
 
-
+print(!(a >= b))
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
-
+if (a % b == 0){
+    print("true")
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
-
+if (a / b > Int(x)){
+    print("true")
+}
 
 
 /*: Question 7
@@ -64,14 +68,20 @@ let b = 32
 */
 // write your code here
 
-
+if (y / Int(x) > 3){
+    print(true)
+} else {
+    print(false)
+}
 
 
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
 // write your code here
-
+if (y > Int(x) &&  a / b > 9){
+    print(true)
+}
 
 
 
@@ -80,9 +90,20 @@ let b = 32
 */
 // write your code here
 
+var firstNum = 5
+var secondNum = 8
+
+func isGreater(firstNum: Int, secondNum: Int){
+    if (firstNum > secondNum) {
+         true
+    } else {
+         false
+    }
+}
 
 
 
+isGreater(firstNum: firstNum, secondNum: secondNum)
 
 
 /*: Question 10
@@ -98,9 +119,14 @@ let b = 32
 // write your code here
 
 
+func bankTransfer(account1: Int, account2: Int) {
+    if account2 >= 10 {
+        account1 + 10
+        account2 - 10
+    }
+}
 
-
-
+bankTransfer(account1: 10, account2: 10)
 /*:
  Click [here](https://github.com/learn-co-curriculum/swift-conditionals-lab/blob/solution/MyPlayground.playground/Pages/solution.xcplaygroundpage/Contents.swift) for the solution.
  */
