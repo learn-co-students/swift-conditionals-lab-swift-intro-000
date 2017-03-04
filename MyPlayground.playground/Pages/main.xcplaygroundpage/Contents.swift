@@ -26,37 +26,45 @@ let b = 32
 */
 // write your code here
 
+print(a >= b)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
-
+print(a % b == 0)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
+print(y * b <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
 
-
+print(!(a >= b))
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
 
+if a % b == 0 {
+	print("true")
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
 
+if Double(a / b) > x {
+	print("true")
+}
 
 
 /*: Question 7
@@ -64,7 +72,11 @@ let b = 32
 */
 // write your code here
 
-
+if Double(y) / x > 3 {
+	print("true")
+} else {
+	print("false")
+}
 
 
 /*: Question 8
@@ -72,7 +84,9 @@ let b = 32
 */
 // write your code here
 
-
+if Double(y) > x && a / b > 9 {
+	print("true")
+}
 
 
 /*: Question 9
@@ -80,7 +94,13 @@ let b = 32
 */
 // write your code here
 
-
+func isGreater(a: Int, b: Int) -> Bool {
+	if a > b {
+		return true
+	} else {
+		return false
+	}
+}
 
 
 
@@ -90,14 +110,43 @@ let b = 32
 */
 // write your code here
 
+func isForceWith(forceWith: String) -> Bool {
+	
+	if forceWith == "Luke" {
+		return true
+	} else if forceWith == "Leia"{
+		return true
+	} else if forceWith == "Anakin"{
+		return true
+	} else if forceWith == "Obi Wan"{
+		return true
+	} else if forceWith == "Yoda"{
+		return true
+	} else if forceWith == "Vader"{
+		return true
+	} else {
+		return false
+	}
+}
 
+let charName = "Vader"
 
+isForceWith(forceWith: charName)
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
 
+func accounts(myAcc: Int, otherAcc: Int) {
 
+	var myAccount = myAcc
+	var otherAccount = otherAcc
+	
+	if otherAccount >= 10 {
+		myAccount += 10
+		otherAccount -= 10
+	}
+}
 
 
 
