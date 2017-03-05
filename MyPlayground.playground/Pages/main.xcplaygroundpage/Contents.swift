@@ -26,7 +26,7 @@ let b = 32
 */
 // write your code here
 
-
+dd
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
