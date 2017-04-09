@@ -13,8 +13,6 @@
  */
 
 
-// Given....
-//Change
 //Another Change
 let x = 5.0
 let y = 12
