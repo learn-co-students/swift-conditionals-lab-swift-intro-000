@@ -17,7 +17,7 @@
 let x = 5.0
 let y = 12
 let a = 321
-var b = 32
+let b = 32
 
 
 
