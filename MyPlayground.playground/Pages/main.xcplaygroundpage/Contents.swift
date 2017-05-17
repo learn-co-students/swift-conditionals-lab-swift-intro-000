@@ -25,38 +25,42 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
+print(a>=b)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
-
+print(a % b == 0)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
-
+print(y * b <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
-
+print(!(a >= b ))
 
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
-
+if a % b == 0 {
+    print(true)
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
-
+if Double(a / b) > x {
+    print(true)
+}
 
 
 /*: Question 7
@@ -64,15 +68,16 @@ let b = 32
 */
 // write your code here
 
-
-
+print( Double(y) / x > 3.0 ? true : false)
 
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
 // write your code here
 
-
+if Double(y) > x && a / b > 9 {
+    print(true)
+}
 
 
 /*: Question 9
@@ -80,7 +85,9 @@ let b = 32
 */
 // write your code here
 
-
+func isGreater(num1: Int, num2: Int) -> Bool {
+    return num1 > num2 ? true : false
+}
 
 
 
@@ -90,17 +97,32 @@ let b = 32
 */
 // write your code here
 
-
+func isForceWith(name: String) -> Bool {
+    if name == "Luke" || name == "Leia" || name == "Anakin" || name == "Obi Wan" || name == "Yoda" || name == "Vader" {
+        return true
+    } else {
+        return false
+    }
+}
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
 
+func bankAccounts(yourAccount b1: inout Int, otherAccount b2: inout Int) {
+    if b2 >= 10 {
+        b2 -= 10
+        b1 += 10
+    }
+    
+}
 
+var yourAccount = 100
+var otherAccount = 20
 
-
-
+bankAccounts(yourAccount: &yourAccount, otherAccount: &otherAccount)
+print("\(yourAccount) \(otherAccount)")
 /*:
  Click [here](https://github.com/learn-co-curriculum/swift-conditionals-lab/blob/solution/MyPlayground.playground/Pages/solution.xcplaygroundpage/Contents.swift) for the solution.
  */
