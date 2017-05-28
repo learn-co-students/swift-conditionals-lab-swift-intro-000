@@ -20,58 +20,64 @@ let a = 321
 let b = 32
 
 
+func printTrue() { print("true") }
+func printFalse() { print("false") }
 
 /*: Question 1
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
-
+print(a >= b)
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
 
+print(a % b == 0)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
-
+print((y * b) <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
-
+print(!(a >= b))
 
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
+if a % b >= 0 { printTrue }
 
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
-
+if (Double(a / b) > x) { printTrue }
 
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
 // write your code here
-
-
+if (Double(y)/x) > 3.0 {
+    printTrue
+} else {
+    printFalse
+}
 
 
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
 // write your code here
-
+if (Double(y) > x && ((a/b) > 9)) { printTrue }
 
 
 
@@ -80,28 +86,48 @@ let b = 32
 */
 // write your code here
 
+func isGreater(_ one: Int, _ two: Int) -> Bool {
+    return (one > two)
+}
 
-
-
+isGreater(1,2)
+print(isGreater(4,2))
 
 
 /*: Question 10
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
 // write your code here
-
-
+func isForceWith(_ name: String) -> Bool {
+    let withForce = ["Luke", "Leia", "Anakin", "Obi Wan", "Yoda", "Vader"]
+    return withForce.contains(name)
+}
+print(isForceWith("Yoda"))
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
 
+// Question 11 is written rather oddly. As far as I can tell, you can not mutate arguments of a function. 
+// So to actually subtract from "my account", I assign myAccount outside the function.
+// I attempted to construct this answer to abide by the questions specifications. But it's awful code,
+// because `exchangeTen()` is reliant on outside variables.
 
+var myAccount: Float = 10.05
+var bankAccount: Float = 10.16
 
+func exchangeTen(_ accountOne: Float, _ otherAccount: Float) {
+    if (otherAccount-10) >= 0.0 {
+        bankAccount -= 10.0
+        myAccount += 10.0
+    }
+}
 
-
+// Now that I checked the answer, I see what was implied. I guess envisioning the accounts as data that
+// needed to persist is what threw me off. If I knew how to return a tuplet and assign the new altered results
+// to the accounts outside of the function, I would do that now... Maybe after a couple more lessons. :)
 /*:
  Click [here](https://github.com/learn-co-curriculum/swift-conditionals-lab/blob/solution/MyPlayground.playground/Pages/solution.xcplaygroundpage/Contents.swift) for the solution.
  */
-// ❤️
+// ❤️ !
