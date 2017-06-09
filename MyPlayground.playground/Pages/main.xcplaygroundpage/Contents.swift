@@ -25,6 +25,11 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
+if x >= Double(b) {
+    print(x)
+}
+
+
 
 
 /*: Question 2
@@ -38,6 +43,10 @@ let b = 32
 */
 // write your code here
 
+let L = y * b
+
+if L <= a {
+print(L)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
@@ -56,6 +65,10 @@ let b = 32
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
+    if (Double(a)/Double(b)) > x {
+print("True")
+}
+
 
 
 
@@ -64,6 +77,9 @@ let b = 32
 */
 // write your code here
 
+    if (Double(y) / x) > 3  {
+        print("true")
+    }else {print("Fuls")}
 
 
 
@@ -72,14 +88,21 @@ let b = 32
 */
 // write your code here
 
-
+    if Double(y) > x && (a / b) > 9 {
+        print("True")
+}
 
 
 /*: Question 9
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 // write your code here
-
+    func isGreater (J: Int, K: Int) -> Bool {
+        
+        if J > K { return true
+        } else {return false}
+        
+}
 
 
 
@@ -90,14 +113,28 @@ let b = 32
 */
 // write your code here
 
+    func isForceWith (d: String) -> Bool {
+        
+        if d == "Luke" || d == "Leia" || d == "Anakin" || d == "Obi Wan" || d == "Yoda" || d == "Vader" { return true
+        }else { return false }
+    }
 
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
-
-
+   
+    func AcountsTransaction (acount1: String, acount2: String) {
+       var acount1Balance = 10
+       var acount2Balnce = 30
+        
+        if (acount1Balance - 10) >= 0 {
+         acount1Balance = acount1Balance - 10
+          acount2Balnce = acount2Balnce + 10
+        }
+            
+    }
 
 
 
@@ -105,3 +142,4 @@ let b = 32
  Click [here](https://github.com/learn-co-curriculum/swift-conditionals-lab/blob/solution/MyPlayground.playground/Pages/solution.xcplaygroundpage/Contents.swift) for the solution.
  */
 // ❤️
+}
