@@ -24,13 +24,7 @@ let b = 32
 /*: Question 1
 ### 1. Print the result of a greater than or equal to b
 */
-if Int(x) >= b{
-    print(x)
-}else if y >= b{
-    print(y)
-}else if a >= b && b == b{
-    print(a,",", b)
-}
+print(a>=b)
 
 
 
@@ -38,7 +32,7 @@ if Int(x) >= b{
 ### 2. Print the result of a modulo b is equal to zero
 */
 
-print(b % 4)
+print(a % b == 0)
 
 
 
@@ -59,7 +53,7 @@ print(!(a >= b))
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
-if (b % 4) == 0{
+if (a % b) == 0{
     print("true")
 }
 
@@ -67,10 +61,7 @@ if (b % 4) == 0{
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
-
-var result = a / b
-
-if  result >= Int(x){
+if Double(a / b) > x {
     print("true")
 }
 
@@ -79,9 +70,9 @@ if  result >= Int(x){
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
-if y / Int(x) >= 3{
+if Double(y) / x > Double(3) {
     print("true")
-}else{
+} else {
     print("false")
 }
 
@@ -91,8 +82,10 @@ if y / Int(x) >= 3{
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
-if y > Int(x) && a / b > 9{
+if Double(y) > x  &&  a / b > 9 {
     print("true")
+} else {
+    print("false")
 }
 
 
@@ -101,29 +94,42 @@ if y > Int(x) && a / b > 9{
 /*: Question 9
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
-func isGreater(a: Int, b:Int){
-    if a > b{
-        true
-    }else{
-        false
+func isGreater(a:Int, b:Int) -> Bool {
+    if a > b {
+        return true
+    } else {
+        return false
     }
 }
-
-isGreater(a: a, b: b)
-
 
 
 
 /*: Question 10
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
-func isForceWith(a:String){
-    if a == "true"{
-        true
+func isForceWith(name:String) -> Bool {
+    if name == "Luke" {
+        return true
+        
+    } else if name == "Leia" {
+        return true
+        
+    } else if name == "Anakin" {
+        return true
+        
+    } else if name == "Obi Wan" {
+        return true
+        
+    } else if name == "Yoda" {
+        return true
+        
+    } else if name == "Vader" {
+        return true
+        
+    } else {
+        return false
     }
 }
-
-isForceWith(a: "Yoda")
 
 
 
@@ -131,7 +137,7 @@ isForceWith(a: "Yoda")
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 func lastOne(mine:Double, other: Double){
-    if mine >= other && other >= 0{
+    if other >= 0{
         var newOther = other - 10
         var newMine = mine + 10
         
