@@ -26,11 +26,18 @@ let b = 32
 */
 // write your code here
 
+print(a>=b)
+
+
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
+
+print(a % b == 0)
+
+
 
 
 /*: Question 3
@@ -38,11 +45,18 @@ let b = 32
 */
 // write your code here
 
+print((y * b) <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
+
+print(!(a >= b))
+
+
+
+
 
 
 
@@ -51,11 +65,30 @@ let b = 32
 */
 // write your code here
 
+if a % b == 0 {
+    print("true")
+}
+
+
+
+
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
+
+if a/b > Int(x) {
+    print("true")
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -64,7 +97,11 @@ let b = 32
 */
 // write your code here
 
-
+if (y / Int(x)) > 3 {
+    print("true")
+} else {
+    print("false")
+}
 
 
 /*: Question 8
@@ -72,13 +109,27 @@ let b = 32
 */
 // write your code here
 
-
+if (Double(y) > x) && a / b > 9 {
+    print("true")
+}
 
 
 /*: Question 9
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 // write your code here
+
+func isGreater(d: Int, e: Int) {
+    if d > e {
+        print("true")
+    } else {
+        print("false")
+    }
+}
+
+isGreater(d: 2, e: 1)
+
+
 
 
 
@@ -90,12 +141,49 @@ let b = 32
 */
 // write your code here
 
+func isForceWith(person: String) -> Bool {
+    if person == "Luke" {
+        return true
+    } else if person == "Leia" {
+        return true
+    } else if person == "Anakin" {
+        return true
+    } else if person == "Obi Wan" {
+        return true
+    } else if person == "Yoda" {
+        return true
+    } else if person == "Vader" {
+        return true
+    } else {
+            return false
+        }
+}
+
+isForceWith(person: "Luke")
+isForceWith(person: "Jon")
+
+
+
+
+
+
+
+
+
 
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
+
+func tradingMoney(myBank: Int, yourBank:Int) {
+    if yourBank >= 10 {
+        myBank + 10
+        yourBank - 10
+    }
+}
+
 
 
 
