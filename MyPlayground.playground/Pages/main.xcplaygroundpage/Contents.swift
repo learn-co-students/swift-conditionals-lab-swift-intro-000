@@ -26,45 +26,53 @@ let b = 32
 */
 // write your code here
 
-
+print((a >= b))
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
 
-
+print(a % b == 0)
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
-
+print(((y * b) <= a))
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
 
-
+print(!(a >= b))
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
 
-
+if ((a % b) == 0) {
+    print(true)
+}
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
 
-
+if (Double(a / b) > x) {
+    print(true)
+}
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
 // write your code here
 
-
+if ((Double(y) / x) > Double(3)) {
+    print(true)
+} else {
+    print(false)
+}
 
 
 /*: Question 8
@@ -72,7 +80,9 @@ let b = 32
 */
 // write your code here
 
-
+if ((Double(y) > x) && ((a / b) > 9)) {
+    print(true)
+}
 
 
 /*: Question 9
@@ -80,8 +90,13 @@ let b = 32
 */
 // write your code here
 
-
-
+func isGreater(int1: Int, int2: Int) -> Bool {
+    if (int1 > int2) {
+        return true
+    } else {
+        return false
+    }
+}
 
 
 
@@ -90,18 +105,35 @@ let b = 32
 */
 // write your code here
 
-
+func isForceWith(name: String) -> Bool {
+    if ((name == "Luke")
+        || (name == "Leia")
+        || (name == "Anakin")
+        || (name == "Obi Wan")
+        || (name == "Yoda")
+        || (name == "Vader")) {
+        return true
+    } else {
+        return false
+    }
+}
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
 
-
-
-
+func withdraw(myBal: Double, theirBal: Double) -> (myNewBal: Double, theirNewBal: Double) {
+    if ((theirBal - 10.0) >= 0.0) {
+        return (myBal + 10.0, theirBal - 10.0)
+    } else {
+        return(myBal, theirBal)
+    }
+}
 
 /*:
  Click [here](https://github.com/learn-co-curriculum/swift-conditionals-lab/blob/solution/MyPlayground.playground/Pages/solution.xcplaygroundpage/Contents.swift) for the solution.
  */
-// ❤️
+// ❤️ I do not agree with the solution to 8: it does not ask for false to be printed under any circumstances. In other cases, where false is desired in the "else" case, it's so stated.
+
+// ❤️ I do not think question 11 is clear, and I do not agree with solution to number 11.  The solution just evaluates expressions that add and subtract from the "accounts". But the function does not return anything, so it's just dead code.  It does not really make sense. The question did not really make clear what was meant by "add 10 ... subtract 10", but I don't think it's useful to implement dead code.  At least my solution returns the result of adding and subtracting with multiple values, even if this was not particularly specified.
