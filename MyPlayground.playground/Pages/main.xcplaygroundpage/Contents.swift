@@ -144,12 +144,13 @@ func isForceWith(name:String) -> Bool {
 */
 // write your code here
 
-func bank(bankA: Int, bankB:Int){
-    if(bankB >= 10 ){
-        bankA + 10
-        bankB - 10
+func  🏦(😱: Int, 🤮:Int){
+    if(🤮 >= 10 ){
+        😱 + 10
+        🤮 - 10
     }
 }
+🏦(😱: 12, 🤮: 3)
 
 
 
