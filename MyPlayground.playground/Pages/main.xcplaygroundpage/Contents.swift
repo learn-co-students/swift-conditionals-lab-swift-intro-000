@@ -19,6 +19,7 @@ let y = 12
 let a = 321
 let b = 32
 
+let resulti = a % b
 
 
 /*: Question 1
@@ -26,63 +27,91 @@ let b = 32
 */
 // write your code here
 
+var result = a >= b
+
+print(result)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
 
+var modulo = (a%b==0)
 
+print(modulo)
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
+var three = (y*b) <= a
 
+print(three)
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
 
-
-
+var four = !(a>=b)
+print(four)
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
+var five = (a%b)==0
 
+if five {
+    
+    print(five)
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
+var six = (Double)(a/b) > x
 
-
+if six {
+    
+    print(six)
+}
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
 // write your code here
+var seven = ((Double)(y)/x) > 3
 
-
-
+if seven {
+    
+    print(seven)
+}
 
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
 // write your code here
 
+var eight = ((Double)(y)>x) && (a/b) > 9
 
-
+if eight {
+    
+    print(eight)
+}
 
 /*: Question 9
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 // write your code here
 
+func isGreater(arg1: Int, arg2: Int) -> Bool{
+    
+    let temp = arg1 > arg2
+    
+    return temp
+}
 
-
-
+isGreater(arg1: 5, arg2: 1)
 
 
 /*: Question 10
@@ -90,17 +119,47 @@ let b = 32
 */
 // write your code here
 
+func isForceWith (name: String) -> Bool {
+    
+    
+    
+    let dasForce = name == "Luke" || name == "Leia" || name == "Anakin" || name == "Obi Wan" || name == "Yoda" || name == "Vader"
+    
+    return dasForce
+}
 
-
+isForceWith(name: "Luke")
+isForceWith(name: "Vader")
+isForceWith(name: "Michael")
+isForceWith(name: "Yoda")
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
 
 
+// I'm not entirelly sure if this is the proper way to solve it
+func switcheroo (money1: Double, money2: Double){
+    
+    //Assignments
+    var myMoney = money1
+    
+    var meanDudesMoney = money2
+    
+    print("You had \(myMoney) Ecoins while BlackRose had \(meanDudesMoney)")
+    if meanDudesMoney >= 10 {
+        
+        meanDudesMoney = meanDudesMoney - 10
+        
+        myMoney = myMoney + 10
+    print("Elliot made me do it, enjoy your extra 10 bucks")
+    
+    }
+    
+    print("Now you have \(myMoney) Ecoins, while BlackRose has \(meanDudesMoney)")
+}
 
-
-
+switcheroo(money1: 100, money2: 50)
 /*:
  Click [here](https://github.com/learn-co-curriculum/swift-conditionals-lab/blob/solution/MyPlayground.playground/Pages/solution.xcplaygroundpage/Contents.swift) for the solution.
  */
