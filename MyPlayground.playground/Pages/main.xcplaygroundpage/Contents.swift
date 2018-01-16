@@ -14,7 +14,7 @@
 
 
 // Given....
-let x = 5.0
+let x = 5
 let y = 12
 let a = 321
 let b = 32
@@ -25,25 +25,28 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
-
+let result = a >= b
+print(a>=b)
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
 
+let mod = a % b == 0
 
+print("mod")
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
-
+print((y * b) <= a)
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
-
+let inverse = a >= b
+print(!inverse)
 
 
 /*: Question 5
@@ -51,19 +54,27 @@ let b = 32
 */
 // write your code here
 
-
+if a % b == 0 {
+    print("true")
+}
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
 
-
+if (a / b) > x {
+    print("true")
+}
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
-// write your code here
-
+// write your code he
+if (y/x) > 3 {
+    print("true")
+}else {
+    print("false")
+}
 
 
 
@@ -72,7 +83,9 @@ let b = 32
 */
 // write your code here
 
-
+if y > x && (a/b) > 9 {
+    print("true")
+}
 
 
 /*: Question 9
@@ -81,7 +94,15 @@ let b = 32
 // write your code here
 
 
-
+func isGreater(n: Int, m: Int) -> Bool{
+    if n > m {
+        return true
+    }else {
+        return false
+    }
+}
+isGreater(n: 4, m: 2)
+isGreater(n: 2, m: 4)
 
 
 
