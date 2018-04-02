@@ -134,8 +134,8 @@ func isForceWith (name: String) -> Bool {
 
 func accounts (firstaccnt: Double, secondaccnt: Double){
     if secondaccnt - 10 >= 0 {
-        firstaccnt = firstaccnt + 10
-        secondaccnt = secondaccnt - 10
+        firstaccnt + 10
+        secondaccnt - 10
     }
 }
 
