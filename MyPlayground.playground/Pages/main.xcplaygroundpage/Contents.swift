@@ -25,45 +25,53 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
+print(a >= b)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
-
+print(a % b == 0)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
-
+print(y * b <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
-
+print(!(a >= b))
 
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
-
+if a%b==0 {
+    print("True")
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
-
+if Double(a)/Double(b) > x {
+    print("true")
+}
 
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
 // write your code here
-
+if Double(y)/x > 3.0 {
+    print("true")
+} else {
+    print("false")
+}
 
 
 
@@ -71,7 +79,9 @@ let b = 32
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
 // write your code here
-
+if Double(y) > x && a/b > 9 {
+    print("true")
+}
 
 
 
@@ -79,7 +89,13 @@ let b = 32
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 // write your code here
-
+func isGreater(first: Int, second: Int) {
+    if first > second {
+        print("true")
+    } else {
+        print("false")
+    }
+}
 
 
 
@@ -89,14 +105,37 @@ let b = 32
 ### 10. Write a function "isForceWith" that takes a String argument and returns true if the argument is the name of someone with whom the force is strong, and otherwise returns false. People who have the force are Luke, Leia, Anakin, Obi Wan, Yoda, Vader.
 */
 // write your code here
-
+func isForceWith(person: String) -> Bool {
+    if person == "Luke" {
+        return true
+    } else if person == "Leia" {
+        return true
+    } else if person == "Anakin" {
+        return true
+    } else if person == "Obi Wan" {
+        return true
+    } else if person == "Yoda" {
+        return true
+    } else if person == "Vader" {
+        return true
+    } else {
+        return false
+    }
+}
 
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
-
+func transferFunds(acc1: Int, acc2: Int) {
+    if acc2 >= 10 {
+        acc1 + 10
+        acc2 - 10
+    } else {
+        print("Error: Not enough funds")
+    }
+}
 
 
 
