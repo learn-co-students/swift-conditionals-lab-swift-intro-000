@@ -25,45 +25,68 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
+var result = a >= b
+print(result)
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
-
+let calculation = (a % b) == 0
+print(calculation)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
+result = y * b <= a
+print(result)
 
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
-// write your code here
-
+// write your code here **Note: should use ! not rather than if statements
+result = a >= b
+if result {
+    result = false
+    print(result)
+} else {
+    result = true
+    print(result)
+}
 
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
-
+result = a % b == 0
+print("Q5: \(result)")
+if result {
+    print(result)
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
-
+result = a / b > Int(x)
+if result {
+    print("Q6: \(result)")
+}
 
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
 // write your code here
-
+result = y / Int(x) > 3
+if result {
+    print("Q7: \(result)")
+} else {
+    print("Q7: \(result)")
+}
 
 
 
@@ -80,6 +103,12 @@ let b = 32
 */
 // write your code here
 
+func isGreater(a: Int, b: Int) -> Bool {
+    result = a > b
+    return result
+}
+
+isGreater(a: 5, b: 6)
 
 
 
@@ -90,6 +119,15 @@ let b = 32
 */
 // write your code here
 
+func isForceWith(name: String) -> Bool {
+    if name == "Luke" || name == "Leia" || name == "Anakin" {
+        return true
+    } else {
+        return false
+    }
+}
+
+isForceWith(name: "Erin")
 
 
 /*: Question 11
