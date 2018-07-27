@@ -26,52 +26,66 @@ let b = 32
 */
 // write your code here
 
+print (a>=b)
+
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
 // write your code here
 
+print (a%b==0)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
 
-
+print ((y*b)<=a)
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
 
-
+print (!(a>=b))
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
 
-
+if a%b == 0 {
+    print ("True")
+}
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
 
-
+if Double(a/b) > x {
+    print ("True")
+}
 
 /*: Question 7
 ### 7. Print "true" if y divided by x is greater than three, otherwise print false
 */
 // write your code here
 
-
-
+if Double(y)/x > Double(3) {
+    print ("True")
+}
+else {
+    print ("False")
+}
 
 /*: Question 8
 ### 8. Print "true" if y is greater than x and a divided by b is greater than 9
 */
 // write your code here
 
+if Double(y)>x && a/b > 9{
+    print ("True")
+}
 
 
 
@@ -80,9 +94,16 @@ let b = 32
 */
 // write your code here
 
+func isGreater(first value1:Int, second value2:Int) -> Bool {
+    if value1 > value2 {
+        return true
+    }
+    else {
+        return false
+    }
+}
 
-
-
+isGreater(first: 5, second: 2)
 
 
 /*: Question 10
@@ -90,15 +111,47 @@ let b = 32
 */
 // write your code here
 
+func isForceWith(starwars character:String) -> Bool {
+    if character == "Luke" {
+        return true
+    }
+    else if character ==  "Leia" {
+        return true
+    }
+    else if character == "Anankin" {
+        return true
+    }
+    else if character == "Obi Wan" {
+        return true
+    }
+    else if character == "Yoda" {
+        return true
+    }
+    else if character == "Vader" {
+        return true
+    }
+    
+    else {
+        return false
+    }
+}
 
+isForceWith(starwars: "Solo")
+isForceWith(starwars: "Vader")
+isForceWith(starwars: "Lando")
 
 /*: Question 11
 ### 11. Create a function where the two arguments represent different bank account (one of those bank accounts is yours). What type should these arguments be if we are to then perform some math operations on them? Setup a conditional that will add 10 to your funds and minus 10 from the other funds (bank account) if the other account won't go negative if we were to take 10 dollars from it.
 */
 // write your code here
+func transferTenDollars(myAccount: Int, otherAccount: Int) {
+    if otherAccount >= 10 {
+        myAccount + 10
+        otherAccount - 10
+    }
+}
 
-
-
+transferTenDollars(myAccount: 100, otherAccount: 10)
 
 
 /*:
