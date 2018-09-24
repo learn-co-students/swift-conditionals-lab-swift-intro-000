@@ -25,6 +25,7 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
+print(a >= b)
 
 
 /*: Question 2
@@ -32,31 +33,40 @@ let b = 32
 */
 // write your code here
 
+print(a % b == 0)
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
 // write your code here
-
+print(y * b <= a)
 
 /*: Question 4
 ### 4. Print the inverse of a greater than or equal to b
 */
 // write your code here
-
+print(!(a >= b))
 
 
 /*: Question 5
 ### 5. Print "true" if a modulo b is equal to zero
 */
 // write your code here
-
+if (a % b == 0) {
+    print("True")
+} else {
+    print("nah")
+}
 
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
 // write your code here
-
+if (a / b > 0) {
+    print("yuh")
+} else {
+    "nuh"
+}
 
 
 /*: Question 7
@@ -79,7 +89,15 @@ let b = 32
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 // write your code here
+func isGreater (a: Int, b: Int) {
+    if a > b {
+        print("A is greater than B my guy")
+    } else {
+        print("no way Jose")
+    }
+}
 
+isGreater (a: 6, b: 23)
 
 
 
@@ -90,6 +108,19 @@ let b = 32
 */
 // write your code here
 
+func isForceWith (name: String) -> Bool {
+    if name == "Luke" {
+        return true
+    } else if name == "Leia" {
+        return true
+    } else if name == "Johnathan" {
+        return true
+    } else {
+        return false
+    }
+}
+
+isForceWith (name: "Peter")
 
 
 /*: Question 11
@@ -97,7 +128,22 @@ let b = 32
 */
 // write your code here
 
+var newhisBank = 2
+var newmyBank = 3
 
+func bankAccounts (myBank: Int, hisBank: Int) -> Int{
+    if hisBank > 10 {
+        newhisBank = hisBank - 10
+        newmyBank = myBank + 10
+        print("Your new bank account is \(newmyBank) and his new bank account is \(newhisBank)")
+    } else {
+        print("Unable to do transaction")
+    }
+    return myBank
+}
+
+bankAccounts(myBank: 23, hisBank: 234)
+bankAccounts(myBank: 1, hisBank: 1)
 
 
 
