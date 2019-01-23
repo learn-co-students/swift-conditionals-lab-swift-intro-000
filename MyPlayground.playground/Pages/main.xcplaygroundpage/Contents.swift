@@ -25,18 +25,21 @@ let b = 32
 ### 1. Print the result of a greater than or equal to b
 */
 // write your code here
-
+if (33 >= b)
+{
+    print("33 is greater than \(b)")
+}
 
 /*: Question 2
 ### 2. Print the result of a modulo b is equal to zero
 */
-// write your code here
+print(32 % b)
 
 
 /*: Question 3
 ### 3. Print the result of y times b less than or equal to a
 */
-// write your code here
+print("result ", y * b <= a)
 
 
 /*: Question 4
@@ -55,7 +58,10 @@ let b = 32
 /*: Question 6
 ### 6. Print "true" if a divided by b is greater than x
 */
-// write your code here
+if Double(a / b) > x
+{
+    print("true")
+}
 
 
 
@@ -79,9 +85,21 @@ let b = 32
 ### 9. Write a function "isGreater" that takes two Int arguments and returns true if the first is greater than the second and false if they're not
 */
 // write your code here
+func isGreater(number1: Int, number2: Int) -> Bool
+{
+    if number1 > number2
+    {
+        print("true, number1 is greater than number2")
+        return true
+    }
+    else
+    {
+        print("false, number1 is not greater than number2")
+        return false
+    }
+}
 
-
-
+isGreater(number1: 5, number2: 6)
 
 
 
